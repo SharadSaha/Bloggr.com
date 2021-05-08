@@ -1,0 +1,72 @@
+{% extends 'blog/base.html' %} {% load static %} {% block content %}
+<div class="col-sm-10">
+  <h1 class="text-white my-5">Create and make posts using Bloggr</h1>
+
+  <div class="jumbotron jumbo-color">
+    <h1 class="display-5">Welcome to bloggr.com</h1>
+    <p class="lead">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt quae modi
+      nisi id necessitatibus dolorem? Doloremque alias officia error. Veritatis
+      atque incidunt reiciendis assumenda suscipit beatae at in facilis iure
+      sed, eius, dolores deserunt impedit placeat doloribus perspiciatis
+      laboriosam expedita!.
+    </p>
+    <hr class="my-4" />
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et, ex enim
+      distinctio facere aut soluta. Sit quos asperiores magnam molestias ut
+      iusto cumque, delectus facilis temporibus nemo omnis pariatur velit.
+    </p>
+    <p class="lead">
+      <a class="btn btn-outline-light btn-rounded" href="#" role="button"
+        >Learn more</a
+      >
+    </p>
+  </div>
+  <br />
+
+  <div class="jumbotron jumbo-color">
+    <h1 class="display-5">Become an author at Bloggr</h1>
+    <p class="lead">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt quae modi
+      nisi id necessitatibus dolorem? Doloremque alias officia error. Veritatis
+      atque incidunt reiciendis assumenda suscipit beatae at in facilis iure
+      sed, eius, dolores deserunt impedit placeat doloribus perspiciatis
+      laboriosam expedita!.
+    </p>
+    <hr class="my-4" />
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et, ex enim
+      distinctio facere aut soluta. Sit quos asperiores magnam molestias ut
+      iusto cumque, delectus facilis temporibus nemo omnis pariatur velit.
+    </p>
+    <p class="lead">
+      <a class="btn btn-outline-light btn-rounded" href="#" role="button"
+        >Learn more</a
+      >
+    </p>
+  </div>
+
+  {% for post in posts %}
+  <br>
+  <div class="jumbotron jumbo-color">
+    <h1 class="display-5">{{post.title}}</h1>
+    <p class="lead">
+     {{post.description}}
+    </p>
+    <hr class="my-4" />
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et, ex enim
+      distinctio facere aut soluta. Sit quos asperiores magnam molestias ut
+      iusto cumque, delectus facilis temporibus nemo omnis pariatur velit.
+    </p>
+    <p class="lead">
+      <a class="btn btn-outline-light btn-rounded" href="#" role="button"
+        >Learn more</a
+      >
+    </p>
+  </div>
+  {% endfor %}
+</div>
+
+{% endblock content %}

@@ -1,0 +1,40 @@
+body{
+    background-color: rgb(78, 63, 63);
+    color: antiquewhite;
+}
+
+
+ .jumbo-color{
+    color: #FFFFFF;
+    background-color: rgb(107, 91, 91);
+    padding-right: 100px;
+    padding-left: 100px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    }
+
+    .border-right {
+        border-right: 1px solid blanchedalmond;
+    }
+
+    .pd-left{
+        padding-left: 20px;
+    }
+
+    .border-bottom{
+      border-bottom: 1px solid blanchedalmond;
+      padding-bottom: 50px;
+    }
+
+    /* @each $state, $value in $theme-colors {
+        $alert-background: shift-color($value, $alert-bg-scale);
+        $alert-border: shift-color($value, $alert-border-scale);
+        $alert-color: shift-color($value, $alert-color-scale);
+        @if (contrast-ratio($alert-background, $alert-color) < $min-contrast-ratio) {
+          $alert-color: mix($value, color-contrast($alert-background), abs($alert-color-scale));
+        }
+        .alert-#{$state} {
+          @include alert-variant($alert-background, $alert-border, $alert-color);
+        }
+      }
+       */
