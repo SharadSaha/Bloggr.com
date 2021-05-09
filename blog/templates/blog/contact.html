@@ -1,4 +1,24 @@
-{% extends 'blog/base.html' %} {% load static %} {% block content %}
+{% extends 'blog/base.html' %} {% load static %}
+
+{% block msg %}
+{% if messages %}
+{% for message in messages %}
+
+<!-- <div class="alert alert-success alert-dismissible">
+  <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+  <strong>Success!</strong> Indicates a successful or positive action.
+</div> -->
+
+<div {% if message.tags %} class="alert alert-{{message.tags}} alert-dismissible fade show container col-sm-12" {% endif %}>
+ <strong>{{message}}</strong>
+      <a href="{% url 'Contact' %}" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+</div>
+
+{% endfor %}
+{% endif %}
+{% endblock msg %}
+
+ {% block content %}
 <div class="col-sm-10">
   <h1 class="text-white my-5">Reach out to us!</h1>
 
@@ -18,9 +38,8 @@
         <form
           id="contact-form"
           name="contact-form"
-          action="mail.php"
           method="POST"
-        >
+        >{% csrf_token%}
           <!--Grid row-->
           <div class="row">
             <!--Grid column-->
