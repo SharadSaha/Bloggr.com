@@ -58,7 +58,7 @@
       <tbody>
         {% for post in posts %}
         <tr>
-          <th scope="row" style="color: antiquewhite">{{post.id}}</th>
+          <th scope="row" style="color: antiquewhite">{{forloop.counter}}</th>
           <td style="color: antiquewhite">{{post.title}}</td>
           <td style="color: antiquewhite">{{post.description}}</td>
           <td class="text-center">
