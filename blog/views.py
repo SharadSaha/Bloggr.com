@@ -18,6 +18,16 @@ def about(request):
 
 
 def contact(request):
+    if request.user.is_authenticated:
+        if request.method=="POST":
+            name=request.POST['name']
+            email=request.POST['email']
+            subject=request.POST['subject']
+            message=request.POST['message']
+            if name and email and subject and message:
+                return HttpResponseRedirect('/dashboard')
+            else:
+                messages.error(request,'All fields required.')
     return render(request,'blog/contact.html')
 
 
